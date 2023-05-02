@@ -13,8 +13,10 @@ startChanging.addEventListener("click", ()=>{
     colorChanger()
     timeoutId = setInterval(colorChanger, 1000);
     startChanging.setAttribute("disabled", "disabled")
+    stopChanging.removeAttribute("disabled", "disabled")
 })
 stopChanging.addEventListener("click", ()=>{
     clearInterval(timeoutId);
+    stopChanging.setAttribute("disabled", "disabled");
     startChanging.removeAttribute("disabled", "disabled");
 })
