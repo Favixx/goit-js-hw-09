@@ -11,7 +11,7 @@ function colorChanger(){
 }
 startChanging.addEventListener("click", ()=>{
     colorChanger()
-    timeoutId = setInterval(colorChanger, 1500);
+    timeoutId = setInterval(colorChanger, 1000);
     startChanging.setAttribute("disabled", "disabled")
 })
 stopChanging.addEventListener("click", ()=>{
