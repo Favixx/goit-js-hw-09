@@ -5,6 +5,7 @@ const startChanging = document.querySelector('[data-start]');
 const stopChanging = document.querySelector('[data-stop]');
 const body = document.querySelector('body')
 let timeoutId
+stopChanging.setAttribute("disabled", "disabled");
 function colorChanger(){
     const color = getRandomHexColor()
     body.style.backgroundColor = color;
@@ -17,6 +18,6 @@ startChanging.addEventListener("click", ()=>{
 })
 stopChanging.addEventListener("click", ()=>{
     clearInterval(timeoutId);
-    stopChanging.setAttribute("disabled", "disabled");
     startChanging.removeAttribute("disabled", "disabled");
+    stopChanging.setAttribute("disabled", "disabled");
 })
