@@ -40,11 +40,11 @@ function convertMs(ms) {
 function onTimerStart() {
   start.disabled = true;
   selectedDate = fp.selectedDates[0];
-  timerId = setInterval(() => {
+  const timerId = setInterval(() => {
     const currentDate = new Date();
     const countdown = selectedDate - currentDate;
 
-    if (countdown < 0) {
+    if (countdown <= 0) {
       clearInterval(timerId);
       return;
     }
